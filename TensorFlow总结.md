@@ -137,7 +137,7 @@ x1: tf.Tensor([1. 2. 3.], shape=(3,), dtype=float64)
 x2: tf.Tensor([1 2 3], shape=(3,), dtype=int32)
 ```
 #### 8. tf.reduce_min(张量名) & tf.reduce_max(张量名)
-解释：计算张量维度上元素的最小最大值。
+解释：计算张量维度上元素的最小、最大值。
 代码：
 
 ```python
@@ -208,6 +208,7 @@ sum of m_x: tf.Tensor([6 7], shape=(2,), dtype=int32)
 sum of m: tf.Tensor(13, shape=(), dtype=int32)
 ```
 #### 11. tf.Variable(initial_value, trainable, validate_shape,name)
+
 解释：将变量标记为 “可训练” 的，被它标记了的变量，会在反向传播中记录自己的梯度信息。
 **initial_value:** 默认为 None，可以搭配 tensorflow 随机生成函数来初始化参数；
 **trainable:** 默认为 True，表示可以后期被算法优化的，如果不想该变量被优化，即改为 False；
@@ -278,6 +279,7 @@ a的三次幂: tf.Tensor([[27. 27.]], shape=(1, 2), dtype=float32)
 a的开方: tf.Tensor([[1.7320508 1.7320508]], shape=(1, 2), dtype=float32)
 ```
 #### 14. tf.matmul(矩阵 1, 矩阵 2)
+
 解释：实现两个矩阵的相乘。
 代码：
 
@@ -349,8 +351,10 @@ print('grad: ', grad)
 grad: tf.Tensor(6.0, shape=(), dtype=float32)
 ```
 #### 17. enumerate(列表名)
+
 解释：枚举出每一个元素，并在元素前配上对应的索引号，常在 for 循环中使用。
 代码：
+
 ```python
 # enumerate.py
 
@@ -443,6 +447,7 @@ y_pro: tf.Tensor([0.2563381  0.69540703  0.04825491], shape=(3,), dtype=float32)
 #### 21. assign_sub()
 解释：对参数实现自更新。使用此函数前需利用 tf.Variable 定义变量 w 为可训练。
 代码：
+
 ```python
 # assign_sub.py
 
@@ -459,6 +464,7 @@ x: <tf.Variable 'Variable:0' shape=() dtype=int32, numpy=3>
 #### 22.  tf.argmax (张量名, axis=操作轴)
 解释：返回张量沿指定维度最大值的索引。
 代码：
+
 ```python
 # argmax.py
 
